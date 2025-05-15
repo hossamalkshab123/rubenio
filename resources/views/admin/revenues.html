@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" />
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+    <title>Brmja Tech</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="sidebar">
+            <div class="head">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Logo" />
+                </div>
+                <span class="menu-icon close"><i class="uil uil-times"></i></span>
+            </div>
+            <ul class="links list-unstyled p-0 m-0">
+                <li>
+                    <a href="index.html" class="link  d-block w-100 px-3 py-2">الصفحة الرئيسية</a>
+                </li>
+                <li>
+                    <a href="customers.html" class="link d-block w-100 px-3 py-2">العملاء</a>
+                  </li>
+                  <li>
+                    <a href="salesdepartment.html" class="link d-block w-100 px-3 py-2">اداره المبيعات</a>
+                  </li>
+                  <li>
+                    <a href="createtheinvoice.html" class="link d-block w-100 px-3 py-2">انشاء الفاتوره</a>
+                  </li>
+                  <li>
+                    <a href="contracts.html" class="link d-block w-100 px-3 py-2">العقود</a>
+                  </li>
+                  <li>
+                    <a href="distributionofsilences.html" class="link d-block w-100 px-3 py-2">توزيع التسكات</a>
+                  </li>
+                  <li>
+                    <a href="accounts.html" class="link d-block w-100 px-3 py-2">الحسابات</a>
+                  </li>
+                  <li>
+                    <a href="revenues.html" class="link  d-block w-100 px-3 py-2">الايرادات</a>
+                  </li>
+                  <li>
+                    <a href="requests.html" class="link  d-block w-100 px-3 py-2">الطلبات</a>
+                  </li>
+                  <li>
+                    <a href="contactus.html" class="link  d-block w-100 px-3 py-2">تواصل معنا</a>
+                  </li>
+                  <li>
+                    <a href="accountsmanager.html" class="link  d-block w-100 px-3 py-2">مديره الحسابات</a>
+                  </li>
+                  <li>
+                    <a href="hr.html" class="link  d-block w-100 px-3 py-2">hr</a>
+                  </li>
+                  <li>
+                    <a href="contractsareemployees.html" class="link  d-block w-100 px-3 py-2">كل العقود للموظفين</a>
+                  </li>
+            </ul>
+
+        </div>
+        <div class="content">
+            <div class="header">
+                <div class="container d-flex justify-content-between align-items-center py-3">
+                    <div class="name mx-3 d-flex align-items-center gap-3">
+                        <span class="menu-icon open"><i class="uil uil-bars"></i></span>
+                        <h1 class="h4 mb-0">الايرادات</h1>
+                    </div>
+                    <div class="dropdown user mx-3">
+                        <div class="dropdown-toggle d-flex align-items-center justify-content-between w-100"
+                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false" role="button"
+                            style="min-width: 180px;">
+                            <div class="d-flex gap-2 align-items-center">
+                                <div class="image me-2">
+                                    <img src="assets/admin.jpeg" alt="admin" class="rounded-circle" width="32"
+                                        height="32" />
+                                </div>
+                                <span>Admin</span>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#">تسجيل الخروج</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper mt-0">
+                <div class="container">
+                   
+                    <div class="data-table mb-3">
+                        <h5 class="mb-3">الايرادات</h5>
+
+                        <div
+                            class="data-table-controls d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                            <div>
+                                <div class="dropdown">
+                                    <button class="btn filtering-btn2 border dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        تصفية بواسطة
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">الخيار 1</a></li>
+                                        <li><a class="dropdown-item" href="#">الخيار 2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2">
+                              
+                                <button class="btn filtering-btn d-flex align-items-center" data-bs-toggle="modal"
+                                    data-bs-target="#addusers">
+                                    إضافة جديدة
+                                </button>
+                            </div>
+                        </div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th><input class="form-check-input" type="checkbox" id="selectAll" /></th>
+                                    <th>ID</th>
+                                    <th>الاسم</th>
+                                    <th>رقم التواصل</th>
+                                    <th>الاهتمام</th>
+                                    <th>التصنيف</th>
+                                    <th>ملاحظات</th>
+                                    <th>مصدر العميل</th>
+                                    <th>بواسطة من ؟</th>
+                                    <th>التاريخ</th>
+                                    <th>التحكم</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input class="form-check-input row-checkbox" type="checkbox" /></td>
+                                    <td>1</td>
+                                    <td>منجاوي</td>
+                                    <td>01019448115</td>
+                                    <td>مهتم</td>
+                                    <td>ويب-ابلكشن-ERP</td>
+                                    <td>بس بس بس بس بس</td>
+                                    <td>واتس - فيس</td>
+                                    <td>هدي</td>
+                                    <td>23 Dec 2024 02:18 PM</td>
+                                    <td>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <button class="btn btn-page-primary ms-2" data-bs-toggle="modal"
+                                            data-bs-target="#editusers">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M19 19C19.5523 19 20 19.4477 20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20C4 19.4477 4.44772 19 5 19H19ZM18.003 3.58492L19.4151 4.99703C20.195 5.77692 20.195 7.04137 19.4151 7.82126L11.1778 16.0586C11.025 16.2114 10.8268 16.3105 10.6129 16.341L6 17L6.65899 12.3871C6.68954 12.1732 6.78864 11.975 6.94141 11.8222L15.1787 3.58492C15.9586 2.80503 17.2231 2.80503 18.003 3.58492ZM16.5909 4.99703L8.58911 12.9988L8.35399 14.646L10.0012 14.4109L18.003 6.40914L16.5909 4.99703Z"
+                                                        fill="#003F9C" />
+                                                </svg>
+                                            </button>
+                                            <button class="btn btn-outline-danger btn-page-primary">
+                                                <i class="uil uil-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+                              
+                              
+                            </tbody>
+                        </table>
+
+                        <!-- Pagination Controls -->
+                        <nav class="d-flex justify-content-center mt-4">
+                            <ul class="pagination custom-pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        &rarr;
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item disabled"><span class="page-link dots">...</span></li>
+                                <li class="page-item"><a class="page-link" href="#">20</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+
+                                        &larr;
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+
+                    </div>
+               
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="addusers" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content p-2 rounded-4">
+                    <div class="modal-header border-0 d-flex justify-content-between align-items-center">
+                        <h5 class="modal-title fw-bold" id="addNewsModalLabel">إضافة عميل جديد</h5>
+                        <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <div>
+                                        <label for="mainTitle" class="form-label fw-semibold">الاسم</label>
+                                        <input type="text" class="form-control" id="mainTitle" name="mainTitle" placeholder="محمد علي العشماوي">
+                                    </div>
+                                </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="phone" class="form-label fw-semibold">رقم التواصل</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="01056549464">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="intersed" class="form-label fw-semibold">الاهتمام</label>
+                                    <input type="text" class="form-control" id="intersed" name="intersed" placeholder="مهتم">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="web" class="form-label fw-semibold">التصنيف</label>
+                                    <input type="text" class="form-control" id="web" name="web" placeholder="ويب">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-2">
+                                <div>
+                                    <label for="titleDescription" class="form-label fw-semibold">ملاحظات</label>
+                                    <textarea class="form-control" id="titleDescription" name="titleDescription" rows="5"
+                                    placeholder="-- نص --&#10;-- نص --&#10;-- نص --"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="link" class="form-label fw-semibold">مصدر العميل</label>
+                                    <input type="text" class="form-control" id="link" name="link" placeholder="واتس - فيس">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="by" class="form-label fw-semibold">بواسطة من ؟</label>
+                                    <input type="text" class="form-control" id="by" name="by" placeholder="ريم">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="date" class="form-label fw-semibold">التاريخ</label>
+                                    <input type="date" class="form-control" id="date" name="date" placeholder="23 Dec 2024 02:18 PM">
+                                </div>
+                            </div>
+                        </div>
+                          
+                        </form>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-between">
+                        <button type="button" class="btn second-submit-btn" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn submit-primary-btn">إضافة جديدة</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal fade" id="editusers" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content p-2 rounded-4">
+                    <div class="modal-header border-0 d-flex justify-content-between align-items-center">
+                        <h5 class="modal-title fw-bold" id="addNewsModalLabel">تعديل</h5>
+                        <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <div>
+                                        <label for="mainTitle" class="form-label fw-semibold">الاسم</label>
+                                        <input type="text" class="form-control" id="mainTitle" name="mainTitle" placeholder="محمد علي العشماوي">
+                                    </div>
+                                </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="phone" class="form-label fw-semibold">رقم التواصل</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="01056549464">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="intersed" class="form-label fw-semibold">الاهتمام</label>
+                                    <input type="text" class="form-control" id="intersed" name="intersed" placeholder="مهتم">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="web" class="form-label fw-semibold">التصنيف</label>
+                                    <input type="text" class="form-control" id="web" name="web" placeholder="ويب">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-2">
+                                <div>
+                                    <label for="titleDescription" class="form-label fw-semibold">ملاحظات</label>
+                                    <textarea class="form-control" id="titleDescription" name="titleDescription" rows="5"
+                                    placeholder="-- نص --&#10;-- نص --&#10;-- نص --"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="link" class="form-label fw-semibold">مصدر العميل</label>
+                                    <input type="text" class="form-control" id="link" name="link" placeholder="واتس - فيس">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="by" class="form-label fw-semibold">بواسطة من ؟</label>
+                                    <input type="text" class="form-control" id="by" name="by" placeholder="ريم">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div>
+                                    <label for="date" class="form-label fw-semibold">التاريخ</label>
+                                    <input type="date" class="form-control" id="date" name="date" placeholder="23 Dec 2024 02:18 PM">
+                                </div>
+                            </div>
+                        </div>
+                          
+                        </form>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-between">
+                        <button type="button" class="btn second-submit-btn" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn submit-primary-btn">تعديل</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+     
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+</body>
+
+</html>
