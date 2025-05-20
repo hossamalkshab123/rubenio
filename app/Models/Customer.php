@@ -17,6 +17,12 @@ class Customer extends Authenticatable
         'password',
         'verification_code',
         'phone_verified_at',
+        
+        'birth_date',
+        'region',
+        'district',
+        'nationality',
+        'image',
     ];
 
     protected $hidden = [
