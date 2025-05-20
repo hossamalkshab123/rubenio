@@ -24,4 +24,17 @@ class Customer extends Authenticatable
         'remember_token',
         'verification_code',
     ];
+    public function favorites()
+    {
+        return $this->hasMany(Favorite::class);
+    }
+    public function cart()
+    {
+        return $this->hasOne(Cart::class);
+    }
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
 }
